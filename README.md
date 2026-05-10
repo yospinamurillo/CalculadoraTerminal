@@ -1,11 +1,13 @@
 🧮 Calculadora de Terminal
 Módulo de código libre para operaciones matemáticas básicas, ideal para tareas de primaria.
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-GPL%20v3-green) ![Status](https://img.shields.io/badge/status-active-brightgreen) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
 📋 Descripción
 calc-terminal-python es una calculadora de línea de comandos desarrollada en Python. Permite realizar operaciones aritméticas básicas directamente desde la terminal, mostrando los resultados con formato visual en color.
 
 Licencia: GNU GPL v3
-Repositorio: github.com/xxxxx/calc-terminal-python
+Repositorio: github.com/yospinamurillo/calc-terminal-python
 ⚙️ Requisitos
 Dependencia	Versión mínima	Notas
 Pitón	3.8 o superior	No se requieren librerías adicionales
@@ -13,7 +15,7 @@ Pitón	3.8 o superior	No se requieren librerías adicionales
 
 🚀 Instalación y ejecución
 1. Clonar el repositorio
-git clone https://github.com/xxxxx/calc-terminal-python.git
+git clone https://github.com/yospinamurillo/CalculadoraTerminal.git
 cd calc-terminal-python
 2. Ejecutar la aplicación
 python calc_math.py
@@ -50,6 +52,24 @@ MODO_DEBUG = True
 📁 Estructura del proyecto
 calc-terminal-python/
 └── calc_math.py    # Archivo principal — contiene toda la lógica de la calculadora
+
+📋 Documentación de Módulos
+El software se compone de los siguientes componentes principales:
+
+- **calc_math.py**: Módulo principal que implementa la lógica de la calculadora. Incluye funciones para realizar operaciones aritméticas básicas (suma, resta, multiplicación, división), validación de entradas, manejo de errores y configuración de modo debug. Utiliza el módulo estándar de Python para entrada/salida y formateo de colores en terminal.
+
+🧪 Tests
+Para asegurar la calidad del código, se incluyen pruebas unitarias que verifican el correcto funcionamiento de las operaciones matemáticas y el manejo de errores.
+
+Ejecutar tests:
+python -m unittest discover
+
+Pruebas realizadas:
+- **Operaciones básicas**: Verifica que las funciones de suma, resta, multiplicación y división devuelvan resultados correctos para números enteros y decimales. Resultados esperados: valores numéricos precisos sin errores de redondeo.
+- **Manejo de errores**: Prueba casos como división por cero, entradas no numéricas y operadores inválidos. Resultados esperados: mensajes de error específicos sin interrupción del programa.
+- **Modo debug**: Confirma que al activar MODO_DEBUG, se muestre la traza completa de excepciones. Resultados esperados: salida detallada en consola para debugging.
+
 📄 Licencia
 Este proyecto se distribuye bajo la licencia GNU General Public License v3.0 .
 Consulte el archivo LICENSEpara más detalles o visite gnu.org/licenses/gpl-3.0 .
+
