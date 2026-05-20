@@ -1,0 +1,88 @@
+@startuml estructura_clases_calculadora
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #E8F4F8
+skinparam classBorderColor #0066CC
+skinparam arrowColor #555555
+
+title Estructura de Clases - CalculadoraTerminal
+
+package "calc_math" {
+  
+  class Calculadora {
+    - num1: float
+    - num2: float
+    - operacion: str
+    - resultado: float
+    - validador: Validador
+    - manejo_errores: ManejoErrores
+    - salida: Salida
+    
+    + ejecutar(): void
+    + obtener_resultado(): float
+    - realizar_suma(): float
+    - realizar_resta(): float
+    - realizar_multiplicacion(): float
+    - realizar_division(): float
+  }
+  
+  class Validador {
+    - modo_debug: bool
+    
+    + validar_numero(valor: str): bool
+    + validar_operador(operador: str): bool
+    + es_division_valida(divisor: float): bool
+    - es_numerico(valor: str): bool
+    - operador_permitido(op: str): bool
+  }
+  
+  class ManejoErrores {
+    - error_actual: str
+    - codigo_error: int
+    - modo_debug: bool
+    
+    + registrar_error(mensaje: str): void
+    + mostrar_error_usuario(mensaje: str): void
+    + mostrar_traza_debug(): void
+    - log_interno(mensaje: str): void
+  }
+  
+  class Salida {
+    - color_resultado: str
+    - COLORES: dict
+    
+    + mostrar_resultado(valor: float): void
+    + mostrar_error(mensaje: str): void
+    + mostrar_menu(): void
+    + mostrar_solicitud(prompt: str): str
+    - colorear_texto(texto: str, color: str): str
+  }
+  
+  ' Relaciones
+  Calculadora --> Validador : usa
+  Calculadora --> ManejoErrores : usa
+  Calculadora --> Salida : usa
+  ManejoErrores --> Salida : notifica
+  
+  note right of Calculadora
+    Clase principal que orquesta
+    la operación matemática
+  end note
+  
+  note right of Validador
+    Responsable de validar
+    toda entrada del usuario
+  end note
+  
+  note right of ManejoErrores
+    Gestiona errores y mantiene
+    modo debug
+  end note
+  
+  note right of Salida
+    Interfaz con el usuario
+    en la terminal
+  end note
+}
+
+@enduml
