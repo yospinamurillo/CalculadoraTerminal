@@ -1,0 +1,28 @@
+@startuml arquitectura_calculadora
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #E8F4F8
+skinparam arrowColor #555555
+
+title Arquitectura de CalculadoraTerminal
+
+package "CalculadoraTerminal" {
+  component [calc_math.py] as CalcModule {
+    interface "Función: realizar_operacion()" as InterfazOp
+    interface "Función: validar_entrada()" as InterfazVal
+  }
+  
+  component [Sistema de Entrada] as InputSys
+  component [Sistema de Validación] as ValidSys
+  component [Motor de Cálculo] as CalcEngine
+  component [Sistema de Salida] as OutputSys
+  component [Manejo de Errores] as ErrorHandler
+}
+
+InputSys --> CalcModule : num1, operacion, num2
+CalcModule --> ValidSys : valida datos
+ValidSys --> CalcEngine : datos válidos
+CalcEngine --> OutputSys : resultado
+ErrorHandler -.-> OutputSys : mensaje error
+
+@enduml
