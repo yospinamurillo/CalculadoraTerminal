@@ -1,0 +1,47 @@
+@startuml casos_uso_calculadora
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam actorBackgroundColor #FFFFFF
+skinparam actorBorderColor #0066CC
+skinparam usecaseBorderColor #0066CC
+skinparam usecaseBackgroundColor #E8F4F8
+
+title Casos de Uso - CalculadoraTerminal
+
+actor Usuario
+
+rectangle CalculadoraTerminal {
+  
+  usecase UC1 as "Ejecutar Operación\nAritmética"
+  usecase UC2 as "Ingresar\nNúmeros"
+  usecase UC3 as "Seleccionar\nOperador"
+  usecase UC4 as "Validar\nEntradas"
+  usecase UC5 as "Mostrar\nResultado"
+  usecase UC6 as "Manejar\nDivisión por Cero"
+  usecase UC7 as "Manejar Entrada\nNo Numérica"
+  usecase UC8 as "Manejar Operador\nInválido"
+  usecase UC9 as "Activar Modo\nDebug"
+  usecase UC10 as "Salir de\nAplicación"
+  
+  ' Relaciones include
+  UC1 ..> UC2 : include
+  UC1 ..> UC3 : include
+  UC1 ..> UC4 : include
+  UC1 ..> UC5 : include
+  
+  ' Relaciones extend (excepciones)
+  UC1 ..|> UC6 : extend
+  UC1 ..|> UC7 : extend
+  UC1 ..|> UC8 : extend
+  
+  ' Validación extend
+  UC4 ..|> UC7 : extend
+  UC4 ..|> UC8 : extend
+  
+}
+
+Usuario --> UC1 : "Realizar\ncálculo"
+Usuario --> UC9 : "Opcionalmente"
+Usuario --> UC10 : "Terminar"
+
+@enduml
