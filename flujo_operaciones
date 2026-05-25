@@ -1,0 +1,48 @@
+@startuml flujo_operaciones
+!theme plain
+skinparam backgroundColor #FEFEFE
+
+title Flujo de Operaciones
+
+start
+
+:Mostrar menu;
+:Solicitar num1;
+
+if (valido?) then (no)
+  :Error;
+else (si)
+  :Guardar num1;
+endif
+
+:Solicitar operador;
+
+if (valido?) then (no)
+  :Error;
+else (si)
+  :Guardar operador;
+endif
+
+:Solicitar num2;
+
+if (valido?) then (no)
+  :Error;
+else (si)
+  :Guardar num2;
+endif
+
+if (division por cero?) then (si)
+  :Mostrar error;
+else (no)
+  :Calcular resultado;
+  :Mostrar resultado;
+endif
+
+if (continuar?) then (si)
+  :Reset;
+else (no)
+  :Salir;
+  stop
+endif
+
+@enduml
