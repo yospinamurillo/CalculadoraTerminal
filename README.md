@@ -112,9 +112,31 @@ El software se compone de los siguientes componentes principales:
 
 **calc_math.py:** Módulo principal que implementa la lógica de la calculadora. Incluye funciones para realizar operaciones aritméticas básicas (suma, resta, multiplicación, división) y vali[...]
 
-## 📊 Diagramas de Arquitectura (NUEVO)
+## 📊 Diagramas de Arquitectura
 
-Consulta la documentación completa de diagramas en `docs/README_DIAGRAMAS.md`
+### 1. Flujo de Funcionamiento General
+
+Este diagrama muestra cómo fluye la información desde la entrada hasta la salida del sistema:
+
+![Diagrama de Flujo - CalculadoraTerminal](./diagrama_flujo.png)
+
+*Sistema de Entrada → Validación → Motor de Cálculo → Salida de Resultados*
+
+### 2. Casos de Uso
+
+Visualización de las interacciones del usuario con la calculadora:
+
+![Casos de Uso - CalculadoraTerminal](./casos_uso.png)
+
+*Muestra todas las operaciones y funcionalidades disponibles para el usuario*
+
+### 3. Estructura de Clases
+
+Representación de la arquitectura orientada a objetos del proyecto:
+
+![Estructura de Clases - CalculadoraTerminal](./estructura_clases.png)
+
+*Clases principales: Calculadora, Validador, ManejErrores, Salida*
 
 ### Otras vistas disponibles:
 
@@ -124,8 +146,8 @@ Consulta la documentación completa de diagramas en `docs/README_DIAGRAMAS.md`
 
 Estos diagramas se renderizan automáticamente en GitHub. Para visualizarlos:
 
-1. Abre cualquier archivo `.puml` en el directorio `docs/diagrams/`
-2. O consulta `docs/README_DIAGRAMAS.md` para más opciones de visualización
+1. Consulta los diagramas incluidos en esta sección
+2. O abre los archivos en el directorio `docs/diagrams/` para más opciones de visualización
 
 ## 🧪 Tests
 
@@ -145,7 +167,7 @@ python -m unittest discover
 
 ## 📄 Licencia
 
-Este proyecto se distribuye bajo la licencia **GNU General Public License v3.0**. Consulte el archivo `LICENSE` para más detalles o visite [gnu.org/licenses/gpl-3.0](https://www.gnu.org/licenses[...]
+Este proyecto se distribuye bajo la licencia **GNU General Public License v3.0**. Consulte el archivo `LICENSE` para más detalles o visite [gnu.org/licenses/gpl-3.0](https://www.gnu.org/licenses/gpl-3.0).
 
 ## ✨ Contribuciones
 
