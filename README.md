@@ -118,7 +118,7 @@ El software se compone de los siguientes componentes principales:
 
 Este diagrama muestra cómo fluye la información desde la entrada hasta la salida del sistema:
 
-![Diagrama de Flujo - CalculadoraTerminal](./diagrama_flujo.png)
+![Diagrama de Flujo - CalculadoraTerminal](docs/diagrams/diagrama_flujo.png)
 
 *Sistema de Entrada → Validación → Motor de Cálculo → Salida de Resultados*
 
@@ -126,7 +126,7 @@ Este diagrama muestra cómo fluye la información desde la entrada hasta la sali
 
 Visualización de las interacciones del usuario con la calculadora:
 
-![Casos de Uso - CalculadoraTerminal](./casos_uso.png)
+![Casos de Uso - CalculadoraTerminal](docs/diagrams/casos_uso.png)
 
 *Muestra todas las operaciones y funcionalidades disponibles para el usuario*
 
@@ -134,7 +134,7 @@ Visualización de las interacciones del usuario con la calculadora:
 
 Representación de la arquitectura orientada a objetos del proyecto:
 
-![Estructura de Clases - CalculadoraTerminal](./estructura_clases.png)
+![Estructura de Clases - CalculadoraTerminal](docs/diagrams/estructura_clases.png)
 
 *Clases principales: Calculadora, Validador, ManejErrores, Salida*
 
