@@ -1,7 +1,7 @@
 # 🧮 Calculadora de Terminal
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-GPL%20v3-green)
+![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Version](https://img.shields.io/badge/Version-1.0.0-informational)
 
@@ -16,7 +16,7 @@ Módulo de código libre para operaciones matemáticas básicas, ideal para tare
 
 ## 📋 Descripción
 
-`calc-terminal-python` es una calculadora de línea de comandos desarrollada en Python. Permite realizar operaciones aritméticas básicas directamente desde la terminal, mostrando los resultados de forma clara y con manejo robusto de errores.
+`calc-terminal-python` es una calculadora de línea de comandos desarrollada en Python. Permite realizar operaciones aritméticas básicas directamente desde la terminal, mostrando los resultados [...]
 
 **Licencia:** GNU GPL v3  
 **Repositorio:** github.com/yospinamurillo/calc-terminal-python
@@ -110,7 +110,7 @@ CalculadoraTerminal/
 
 El software se compone de los siguientes componentes principales:
 
-**calc_math.py:** Módulo principal que implementa la lógica de la calculadora. Incluye funciones para realizar operaciones aritméticas básicas (suma, resta, multiplicación, división) y validación de entrada.
+**calc_math.py:** Módulo principal que implementa la lógica de la calculadora. Incluye funciones para realizar operaciones aritméticas básicas (suma, resta, multiplicación, división) y vali[...]
 
 ## 📊 Diagramas de Arquitectura (NUEVO)
 
@@ -145,7 +145,7 @@ python -m unittest discover
 
 ## 📄 Licencia
 
-Este proyecto se distribuye bajo la licencia **GNU General Public License v3.0**. Consulte el archivo `LICENSE` para más detalles o visite [gnu.org/licenses/gpl-3.0](https://www.gnu.org/licenses/gpl-3.0).
+Este proyecto se distribuye bajo la licencia **GNU General Public License v3.0**. Consulte el archivo `LICENSE` para más detalles o visite [gnu.org/licenses/gpl-3.0](https://www.gnu.org/licenses[...]
 
 ## ✨ Contribuciones
 
