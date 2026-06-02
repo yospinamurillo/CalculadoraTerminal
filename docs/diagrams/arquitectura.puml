@@ -1,0 +1,28 @@
+@startuml arquitectura
+!theme plain
+
+title Arquitectura General - Calculadora Terminal
+
+package "CalculadoraTerminal" {
+    component "calc_math.py" as calc {
+        interface "Entrada de usuario"
+        interface "Procesamiento"
+        interface "Salida de resultado"
+    }
+    
+    note bottom of calc
+        Módulo principal
+        - Validación de entrada
+        - Operaciones aritméticas
+        - Manejo de errores
+    end note
+}
+
+actor Usuario
+database Consola
+
+Usuario --> "Entrada de usuario": Ingresa números\ny operadores
+"Procesamiento" --> "Salida de resultado": Calcula y\nformatea resultado
+"Salida de resultado" --> Consola: Muestra resultado\no error
+
+@enduml
